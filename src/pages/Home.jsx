@@ -10,8 +10,8 @@ const resolveAsset = (p) => {
   const s = String(p);
   if (s.startsWith("http") || s.startsWith("data:") || s.startsWith("/")) return s;
   try {
-    const normalized = s.replace(/^src[\\/]+/, ""); // drop leading src/
-    return new URL(`../${normalized}`, import.meta.url).href; // relative to src/pages
+    const normalized = s.replace(/^src[\\/]+/, "");
+    return new URL(`../${normalized}`, import.meta.url).href;
   } catch {
     return s;
   }

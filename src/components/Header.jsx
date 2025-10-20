@@ -1,11 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
 
+// Resolve logo asset for Vite
+const logoUrl = new URL('../assets/logo.png', import.meta.url).href;
+
 export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-bold text-xl text-secondary">
-          <img src="/assets/logo.png" alt="Hero.io" className="h-8" />
+          <img src={logoUrl} alt="Hero.io" className="h-8" />
           <span>Hero.io</span>
         </Link>
         

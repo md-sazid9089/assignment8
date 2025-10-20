@@ -11,7 +11,7 @@ const resolveAsset = (p) => {
   if (s.startsWith("http") || s.startsWith("data:") || s.startsWith("/")) return s;
   try {
     const normalized = s.replace(/^src[\\/]+/, "");
-    return new URL(`../${normalized}`, import.meta.url).href; // relative to src/pages
+    return new URL(`../assets/${normalized.replace(/^assets[\\/]+/, "")}`, import.meta.url).href;
   } catch {
     return s;
   }
@@ -38,7 +38,14 @@ export default function Apps() {
   const filtered = useMemo(() => {
     const f = data.filter(a => a.title.toLowerCase().includes(q.toLowerCase()));
     const s = [...f].sort((a, b) => sort === "hl" ? b.downloads - a.downloads : a.downloads - b.downloads);
-    return s;
+    // Resolve image fields for Vite/Netlify
+    return s.map(app => {
+      const resolved = { ...app };
+      ["image", "logo", "icon", "thumbnail", "cover", "banner"].forEach((k) => {
+        if (resolved[k]) resolved[k] = resolveAsset(resolved[k]);
+      });
+      return resolved;
+    });
   }, [q, sort]);
 
   return (

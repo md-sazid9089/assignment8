@@ -13,7 +13,7 @@ export default function AppCard({ app }) {
     <Link to={`/apps/${app.id}`} className="card hover:-translate-y-1">
       <div className="bg-gray-100 h-44 flex items-center justify-center">
         <img
-          src={imgSrc}
+          src={app.image || app.icon || app.logo}
           alt={app.title}
           className="w-24 h-24 object-cover rounded-md"
           loading="lazy"

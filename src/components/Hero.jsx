@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+// Resolve hero image asset for Vite
+const heroImgUrl = new URL('../assets/hero.png', import.meta.url).href;
+
 export default function Hero() {
 return (
     <section className="bg-gray-50 pt-0 md:pt-2 pb-16 md:pb-20">
@@ -29,7 +32,7 @@ return (
 
                 <div className="relative">
                     <img 
-                        src="/assets/hero.png" 
+                        src={heroImgUrl}
                         alt="Hero App Interface" 
                         className="relative z-10 max-w-sm md:max-w-lg"
                     />

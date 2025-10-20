@@ -1,4 +1,4 @@
-import error404 from '../../assets/error-404.png';
+import error404 from '../assets/error-404.png';
 
 export default function NotFound() {
   return (

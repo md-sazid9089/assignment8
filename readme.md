@@ -39,6 +39,27 @@ export default {
 @import "tailwindcss";
 ```
 
+## Asset Usage (Images & Logo)
+
+- For images in `src/assets/`, always use:
+  ```js
+  const imgUrl = new URL('../assets/your-image.png', import.meta.url).href;
+  <img src={imgUrl} alt="..." />
+  ```
+- For images in `public/`, use `/your-image.png`.
+
+## Netlify SPA Routing
+
+To support client-side routing (refresh on any route), add a file:
+```
+public/_redirects
+```
+with this content:
+```
+/* /index.html 200
+```
+This ensures all routes serve your SPA.
+
 ## Troubleshooting
 - PostCSS plugin moved warning:
   - Install `@tailwindcss/postcss` and use it in `postcss.config.js`.
