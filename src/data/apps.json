@@ -1,0 +1,230 @@
+[
+  {
+    "image": "/assets/demo-app.webp",
+    "icon": "/assets/demo-app.webp",
+    "title": "Chirp",
+    "companyName": "Hero Labs",
+    "id": 1,
+    "description": "Lightweight social client.",
+    "size": 32,
+    "reviews": 18452,
+    "ratingAvg": 4.6,
+    "downloads": 9200000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 5400 },
+      { "name": "5 star", "count": 10252 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "Snapster",
+    "companyName": "Hero Studios",
+    "id": 2,
+    "description": "Photo sharing made easy.",
+    "size": 45,
+    "reviews": 12000,
+    "ratingAvg": 4.8,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 8200 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app3.webp",
+    "icon": "/assets/demo-app3.webp",
+    "title": "TaskFlow",
+    "companyName": "Hero Apps",
+    "id": 3,
+    "description": "Organize tasks and projects effortlessly.",
+    "size": 28,
+    "reviews": 15678,
+    "ratingAvg": 4.4,
+    "downloads": 5400000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 2800 },
+      { "name": "4 star", "count": 5200 },
+      { "name": "5 star", "count": 6178 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app4.webp",
+    "icon": "/assets/demo-app4.webp",
+    "title": "FitBuddy",
+    "companyName": "Hero Labs",
+    "id": 4,
+    "description": "Your personal fitness and wellness companion.",
+    "size": 52,
+    "reviews": 9876,
+    "ratingAvg": 4.5,
+    "downloads": 4300000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1700 },
+      { "name": "4 star", "count": 3200 },
+      { "name": "5 star", "count": 4076 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app5.webp",
+    "icon": "/assets/demo-app5.webp",
+    "title": "MindNote",
+    "companyName": "Hero Creative",
+    "id": 5,
+    "description": "Capture ideas, notes, and checklists with ease.",
+    "size": 35,
+    "reviews": 12450,
+    "ratingAvg": 4.7,
+    "downloads": 6100000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 2200 },
+      { "name": "4 star", "count": 4200 },
+      { "name": "5 star", "count": 4750 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "RouteX",
+    "companyName": "Hero Tech",
+    "id": 6,
+    "description": "Smart navigation with live traffic and offline maps.",
+    "size": 64,
+    "reviews": 7650,
+    "ratingAvg": 4.2,
+    "downloads": 5200000,
+    "ratings": [
+      { "name": "1 star", "count": 250 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 2900 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app6.webp",
+    "icon": "/assets/demo-app6.webp",
+    "title": "BiteRight",
+    "companyName": "Hero Studios",
+    "id": 7,
+    "description": "Discover recipes and track your nutrition.",
+    "size": 41,
+    "reviews": 8420,
+    "ratingAvg": 4.3,
+    "downloads": 3900000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1600 },
+      { "name": "4 star", "count": 2700 },
+      { "name": "5 star", "count": 3220 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "Stockly",
+    "companyName": "Hero Labs",
+    "id": 8,
+    "description": "Track markets and manage your portfolio.",
+    "size": 38,
+    "reviews": 15400,
+    "ratingAvg": 4.5,
+    "downloads": 7200000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 2600 },
+      { "name": "4 star", "count": 5200 },
+      { "name": "5 star", "count": 6200 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "ZenTimer",
+    "companyName": "Hero Apps",
+    "id": 9,
+    "description": "Focus timer with Pomodoro and analytics.",
+    "size": 22,
+    "reviews": 6900,
+    "ratingAvg": 4.4,
+    "downloads": 3100000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 2800 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "Newsly",
+    "companyName": "Hero Studios",
+    "id": 10,
+    "description": "Personalized news with real-time alerts.",
+    "size": 48,
+    "reviews": 17890,
+    "ratingAvg": 4.1,
+    "downloads": 8800000,
+    "ratings": [
+      { "name": "1 star", "count": 700 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 3200 },
+      { "name": "4 star", "count": 5600 },
+      { "name": "5 star", "count": 7290 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "SketchIt",
+    "companyName": "Hero Creative",
+    "id": 11,
+    "description": "Draw, annotate, and collaborate on the go.",
+    "size": 57,
+    "reviews": 13200,
+    "ratingAvg": 4.6,
+    "downloads": 4500000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 2300 },
+      { "name": "4 star", "count": 4400 },
+      { "name": "5 star", "count": 5400 }
+    ]
+  },
+  {
+    "image": "/assets/demo-app2.webp",
+    "icon": "/assets/demo-app2.webp",
+    "title": "SafeVault",
+    "companyName": "Hero Tech",
+    "id": 12,
+    "description": "Secure password manager with autofill.",
+    "size": 29,
+    "reviews": 10110,
+    "ratingAvg": 4.8,
+    "downloads": 5600000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1700 },
+      { "name": "4 star", "count": 3300 },
+      { "name": "5 star", "count": 4210 }
+    ]
+  }
+]
