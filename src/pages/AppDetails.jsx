@@ -11,8 +11,6 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
-
-// Resolve relative asset paths so Vite includes them in the build
 const resolveAsset = (p) => {
   if (!p) return p;
   const s = String(p);

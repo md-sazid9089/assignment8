@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 
-// Resolve relative asset paths so Vite includes them in the build
 const resolveAsset = (p) => {
   if (!p) return p;
   const s = String(p);
@@ -21,7 +20,6 @@ export default function Home() {
   const [topApps, setTopApps] = useState([]);
 
   useEffect(() => {
-    // Fetch top apps data and resolve common image fields for Vite/Netlify
     const items = data.slice(0, 8).map((app) => {
       const resolved = { ...app };
       ["image", "logo", "icon", "thumbnail", "cover", "banner"].forEach((k) => {

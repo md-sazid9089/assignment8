@@ -10,8 +10,6 @@ export default function Loader() {
     />
   );
 }
-
-// Full-screen overlay loader for route transitions
 export function OverlayLoader() {
   return (
     <div className="fixed inset-0 z-50 bg-white/80 backdrop-blur-sm flex items-center justify-center">

@@ -3,13 +3,10 @@ import data from "../data/apps.json";
 import AppCard from "../components/AppCard.jsx";
 import Loader, { OverlayLoader } from "../components/Loader.jsx";
 import { Link } from "react-router-dom";
-
-// Resolve relative asset paths so Vite includes them in the build
 const resolveAsset = (p) => {
   if (!p) return p;
   const s = String(p);
   if (s.startsWith("http") || s.startsWith("data:")) return s;
-  // Remove leading slash for Vite import
   const normalized = s.replace(/^\/?assets[\\/]+/, "");
   try {
     return new URL(`../assets/${normalized}`, import.meta.url).href;
@@ -39,7 +36,7 @@ export default function Apps() {
   const filtered = useMemo(() => {
     const f = data.filter(a => a.title.toLowerCase().includes(q.toLowerCase()));
     const s = [...f].sort((a, b) => sort === "hl" ? b.downloads - a.downloads : a.downloads - b.downloads);
-    // Resolve image fields for Vite/Netlify
+    
     return s.map(app => {
       const resolved = { ...app };
       ["image", "logo", "icon", "thumbnail", "cover", "banner"].forEach((k) => {

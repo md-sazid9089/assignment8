@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-
-// Resolve hero image asset for Vite
 const heroImgUrl = new URL('../assets/hero.png', import.meta.url).href;
 
 export default function Hero() {

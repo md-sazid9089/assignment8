@@ -1,6 +1,4 @@
 import { Link, NavLink } from 'react-router-dom';
-
-// Resolve logo asset for Vite
 const logoUrl = new URL('../assets/logo.png', import.meta.url).href;
 
 export default function Header() {

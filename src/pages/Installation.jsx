@@ -6,7 +6,7 @@ import { OverlayLoader } from "../components/Loader.jsx";
 
 export default function Installation() {
   const [ids, setIds] = useState([]);
-  const [sort, setSort] = useState("size"); // size | downloads | rating | title
+  const [sort, setSort] = useState("size"); 
   const [routeLoading, setRouteLoading] = useState(true);
 
   useEffect(() => {
