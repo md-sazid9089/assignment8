@@ -8,10 +8,11 @@ import { Link } from "react-router-dom";
 const resolveAsset = (p) => {
   if (!p) return p;
   const s = String(p);
-  if (s.startsWith("http") || s.startsWith("data:") || s.startsWith("/")) return s;
+  if (s.startsWith("http") || s.startsWith("data:")) return s;
+  // Remove leading slash for Vite import
+  const normalized = s.replace(/^\/?assets[\\/]+/, "");
   try {
-    const normalized = s.replace(/^src[\\/]+/, "");
-    return new URL(`../assets/${normalized.replace(/^assets[\\/]+/, "")}`, import.meta.url).href;
+    return new URL(`../assets/${normalized}`, import.meta.url).href;
   } catch {
     return s;
   }

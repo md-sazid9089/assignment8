@@ -1,9 +1,9 @@
-import React from "react";
+import logo from "../assets/logo2.jpg";
 
 export default function Loader() {
   return (
     <img
-      src="/assets/logo.png"
+      src={logo}
       alt="loading"
       aria-label="loading"
       className="animate-spin h-12 w-12 mx-auto block"
@@ -16,7 +16,7 @@ export function OverlayLoader() {
   return (
     <div className="fixed inset-0 z-50 bg-white/80 backdrop-blur-sm flex items-center justify-center">
       <img
-        src="/assets/logo.png"
+        src={logo}
         alt="loading"
         className="animate-spin h-14 w-14"
         aria-label="loading"
