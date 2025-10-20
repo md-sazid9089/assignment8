@@ -4,12 +4,32 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 
+// Resolve relative asset paths so Vite includes them in the build
+const resolveAsset = (p) => {
+  if (!p) return p;
+  const s = String(p);
+  if (s.startsWith("http") || s.startsWith("data:") || s.startsWith("/")) return s;
+  try {
+    const normalized = s.replace(/^src[\\/]+/, ""); // drop leading src/
+    return new URL(`../${normalized}`, import.meta.url).href; // relative to src/pages
+  } catch {
+    return s;
+  }
+};
+
 export default function Home() {
   const [topApps, setTopApps] = useState([]);
 
   useEffect(() => {
-    // Fetch top apps data
-    setTopApps(data.slice(0, 8));
+    // Fetch top apps data and resolve common image fields for Vite/Netlify
+    const items = data.slice(0, 8).map((app) => {
+      const resolved = { ...app };
+      ["image", "logo", "icon", "thumbnail", "cover", "banner"].forEach((k) => {
+        if (resolved[k]) resolved[k] = resolveAsset(resolved[k]);
+      });
+      return resolved;
+    });
+    setTopApps(items);
   }, []);
 
   return (

@@ -4,6 +4,19 @@ import AppCard from "../components/AppCard.jsx";
 import Loader, { OverlayLoader } from "../components/Loader.jsx";
 import { Link } from "react-router-dom";
 
+// Resolve relative asset paths so Vite includes them in the build
+const resolveAsset = (p) => {
+  if (!p) return p;
+  const s = String(p);
+  if (s.startsWith("http") || s.startsWith("data:") || s.startsWith("/")) return s;
+  try {
+    const normalized = s.replace(/^src[\\/]+/, "");
+    return new URL(`../${normalized}`, import.meta.url).href; // relative to src/pages
+  } catch {
+    return s;
+  }
+};
+
 export default function Apps() {
   const [q, setQ] = useState("");
   const [sort, setSort] = useState("hl");
@@ -52,7 +65,7 @@ export default function Apps() {
         ) : (
           <div className="not-found">
             <img
-              src="assets/appt.png"
+              src={resolveAsset("assets/appt.png")}
               alt="No apps found"
               className="not-found-img"
               loading="lazy"

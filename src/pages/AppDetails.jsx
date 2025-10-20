@@ -12,6 +12,19 @@ import {
   Tooltip,
 } from "recharts";
 
+// Resolve relative asset paths so Vite includes them in the build
+const resolveAsset = (p) => {
+  if (!p) return p;
+  const s = String(p);
+  if (s.startsWith("http") || s.startsWith("data:") || s.startsWith("/")) return s;
+  try {
+    const normalized = s.replace(/^src[\\/]+/, "");
+    return new URL(`../${normalized}`, import.meta.url).href; // relative to src/pages
+  } catch {
+    return s;
+  }
+};
+
 export default function AppDetails() {
   const { id } = useParams();
   const app = data.find((a) => a.id === Number(id));
@@ -59,7 +72,8 @@ export default function AppDetails() {
     );
   }
 
-  const imgSrc = app.icon || app.image;
+  // Replace previous imgSrc assignment
+  const imgSrc = useMemo(() => resolveAsset(app?.icon || app?.image), [app]);
 
   return (
     <section className="py-8 md:py-10">
