@@ -4,6 +4,19 @@ import { useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import { OverlayLoader } from "../components/Loader.jsx";
 
+const resolveAsset = (p) => {
+  if (!p) return p;
+  const s = String(p);
+  if (s.startsWith("http") || s.startsWith("data:")) return s;
+  // Remove leading slash and "assets/" prefix for Vite import
+  const normalized = s.replace(/^\/?assets[\\/]+/, "");
+  try {
+    return new URL(`../assets/${normalized}`, import.meta.url).href;
+  } catch {
+    return s;
+  }
+};
+
 export default function Installation() {
   const [ids, setIds] = useState([]);
   const [sort, setSort] = useState("size"); 
@@ -94,7 +107,7 @@ export default function Installation() {
                 >
                   <div className="flex items-center gap-4">
                     <img
-                      src={app.icon || app.image}
+                      src={resolveAsset(app.icon || app.image)}
                       alt={app.title}
                       className="h-12 w-12 rounded-md object-cover bg-gray-100"
                       loading="lazy"
