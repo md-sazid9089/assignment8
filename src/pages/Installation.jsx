@@ -8,7 +8,6 @@ const resolveAsset = (p) => {
   if (!p) return p;
   const s = String(p);
   if (s.startsWith("http") || s.startsWith("data:")) return s;
-  // Remove leading slash and "assets/" prefix for Vite import
   const normalized = s.replace(/^\/?assets[\\/]+/, "");
   try {
     return new URL(`../assets/${normalized}`, import.meta.url).href;
@@ -120,7 +119,7 @@ export default function Installation() {
                       <h3 className="font-semibold">{app.title}</h3>
                       <div className="mt-1 flex items-center gap-4 text-sm">
                         <span className="flex items-center gap-1 text-emerald-600">
-                          {/* download icon */}
+                    
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
